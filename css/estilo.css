@@ -222,24 +222,26 @@ button,input{
 }
 .botones {
     display:flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap:25px;
     margin-top: 25px;
 }
 .botones button {
-width: 150;
-height: 85;
+width: 150PX;
+height: 55px;
 background: #eaffea;
-border-radius: 5px solid #0b5d1e ;
+border: 3px solid #0b5d1e ;
 border-radius: 14px;
-box-shadow: 0 8px #064015 0 14px 18px rgba(0, 0, 0, 0.35); /*sobra sobresalida*/
+box-shadow: 0 8px #064015, 0 14px 18px rgba(0, 0, 0, 0.35); /*sobra sobresalida*/
 font-size: 20px;
 font-weight: bold;
-color: #0b5d1e;
+color: #0c0110;
 display: flex;
 align-items: center;
 cursor: pointer;
 transition: all 0.2s ease;
+justify-content: center;
 }
 .botones button:hover {   /* ala pasar el mouse desliza sombra*/
     background: #3a92d2;
@@ -250,5 +252,64 @@ transform: translate(5px);
 box-shadow: 0 8px 10px rgba(0, 0, 0, 0.35);
 }
 
+
+/* Para adaptar pantallas mas pequeñas*/
+@media (max-width: 768px){
+    .titulo-colores span {
+        font-size: 26px;
+        padding: 6px 8px;
+    }
+    h2{
+        font-size: 22px;
+        margin-top: 15px;
+    }
+    .imagen-grande img {
+        width: 180px;
+    }
+    .contenedor-principal {
+        flex-direction: column;
+        align-items: center;
+        gap:  25px;
+    }
+    .item-figura {
+        justify-content: center;
+    }
+    .circulo, .cuadrado {
+        width: 80px;
+        height: 80px;
+    }
+    .triangulo{
+        border-left: 45px solid transparent;
+        border-right: 45px solid transparent;
+        border-bottom: 80px solid green;
+    }
+    .rectangulo{
+        width: 120px;
+        height: 60px;
+    }
+    .botones{
+        flex-direction: column;
+        gap: 15px;
+    }
+    .botones button {
+        width: 90%;
+        height: 60px;
+        font-size: 18px;
+    }
+    input {
+        width: 90%;
+        font-size: 18px;
+    }
+    .figura {
+        width: 45px;
+        height: 45px;
+        margin: 6px;
+    }  
+    .volver-operaciones {
+        position: static;
+        margin-top: 20px;
+    }
+    
+}
 
 
