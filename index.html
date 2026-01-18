@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <script defer src="js/funciones.js"></script>
+</head>
+<body> 
+    <header>
+  <h1 class="titulo-colores"> 
+      <span>M</span><span>a</span><span>t</span><span>e</span><span>m</span><span>a</span><span>t</span><span>i</span><span>c</span><span>a</span>
+      <span class="espacio"></span>
+      <span>D</span><span>i</span><span>v</span><span>e</span><span>r</span><span>t</span><span>i</span><span>d</span><span>a</span>
+    </h1>
+  </header>
+   <div id="PaginaPrincipal">
+       <div class="imagen-grande">
+            <img src="imagenes/portada.png" alt="Imagen principal">
+       </div>
+        <h2>Figuras Geometricas</h2>
+        <div class="contenedor-principal">
+            <div class="item-figura">
+                <div class="figura-geo circulo"></div>
+                <p><a href="#" onclick="mostrarTeoria('circulo')">Circulo</a></p>
+            </div>
+            <div class="item-figura">
+                <div class="figura-geo cuadrado"></div>
+                <p><a href="#" onclick="mostrarTeoria('cuadrado')">Cuadrado</a></p>
+            </div>
+            <div class="item-figura">
+                <div class="figura-geo triangulo"></div>
+                <p><a href="#" onclick="mostrarTeoria('triangulo')">Triangulo</a></p>
+            </div>
+            <div class="item-figura">
+                <div class="figura-geo rectangulo"></div>
+                <p><a href="#" onclick="mostrarTeoria('rectangulo')">Rectangulo</a></p>
+            </div>
+        </div>
+    
+    <h2>Elige una operacion</h2>
+        <div class="botones">
+                <button onclick="entrar('+')">Suma</button>
+                <button onclick="entrar('-')">Resta</button>
+                <button onclick="entrar('*')">Multiplicacion</button>
+                <button onclick="entrar('/')">Division</button>
+        </div>
+    </div>
+    <div id="PaginaTeorica" style="display: none;" >
+            <h2 id="tituloFigura"></h2>
+        <div class="contenedor-teoria">
+            <div id="figuraTeoria" class="figura-geo"></div>
+            <p id="textoTeoria"></p>
+        </div>
+        <button  onclick="volver()">volver</button>
+    </div>
+    <div id="PaginaEjercicio" style="display:none;">
+               
+            <h3>Elige las Imagenes</h3>
+            
+        <div class="botones">
+            <button onclick="setTema('perros')">Perritos </button>
+            <button onclick="setTema('adas')">Adas </button>
+            <button onclick="setTema('cars')">Cars</button>
+        </div>
+        <button class="nuevo" onclick="nuevoEjercicio()">Nuevo Ejercicio</button>
+        <h2 id="pregunta"></h2>
+        <div id="imagenes"> </div>
+        <input type="number" id="respuesta" placeholder="tu respuesta">
+        <button onclick ="verificar()">Verificar</button>
+        <p id="mensaje"></p>
+        <button  class="volver-operaciones" onclick="volver()">volver</button>
+    </div>
+    
+</body>
+</html>
