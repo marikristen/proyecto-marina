@@ -24,7 +24,7 @@ const imagenes = {
         "imagenes/img4.png", "imagenes/img5.png", "imagenes/img6.png",
         "imagenes/img7.png"
     ],
-     adas:[ 
+     hadas:[ 
         "imagenes/imag1.png", "imagenes/imag2.png", "imagenes/imag3.png",
         "imagenes/imag4.png", "imagenes/imag5.png", "imagenes/imag6.png",
         "imagenes/imag7.png"
